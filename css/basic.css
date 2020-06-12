@@ -10,6 +10,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     list-style: none;
     padding: 0px;
     margin: 0px;
+    box-sizing: border-box;
 }
 
 body,html{
@@ -73,7 +74,7 @@ body,html{
 .header .header-nav a::after{
     content: '';
     position: absolute;
-    border-bottom: 1px  solid #6e6eeb;
+    border-bottom: 1px  solid #79f7db;
     left: 50%;
     right: 50%;
     height: 0;
@@ -87,7 +88,7 @@ body,html{
 }
 
 .header .header-nav a:hover{
-    color: #6e6eeb;
+    color: #79f7db;
     transform: translateY(-5px);
 }
 
@@ -421,8 +422,11 @@ body,html{
 }
 
 .member{
+    /*
     background: url("https://images.pexels.com/photos/1103970/pexels-photo-1103970.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
     background-size: cover;
+    */
+    background-color: #2C3E50;
     display: flex;
     align-self: center;
     width: 100%;
@@ -430,12 +434,13 @@ body,html{
 }
 
 .login{
-    width: 50%;
+    width: 30%;
     height: 75%;
     display: flex;
+    flex-direction: column;
     margin: auto;
     align-items: center;
-    background-color:rgba(255, 255, 255, .85);
+    background-color:rgba(0, 0, 0, 0.479);
     border-radius: 1rem;
 }
 
@@ -444,22 +449,117 @@ body,html{
     width: 100%;
     height: 100%;
     justify-content: center;
-    align-items: center;
-    padding: 0 2rem;
+    /*align-items: center;*/
+    padding: 1rem;
 }
 
+
+.login .user-image i{
+    color: #80ff00;
+    align-self: flex-start;
+    margin: 8rem 0 5rem 0 ;
+    position: relative;
+}
+    
+/*
+帳號密碼輸入時的動作特效
+*/
 .login .login-form label{
-    font-size: 24px;
+    display: block;
+    height: 1.5rem;
+    font-size: 1.5rem;
+    position: relative;
+    top: -2.3rem;
+    left: 1.5rem;
+    color: #fff;
+    transition: ease-out 0.25s;
+    
+}
+
+.login .login-form i{
+    position: relative;
+    color: #FFF;
+    top: -3.5rem;
+    left: 0rem;
+}
+
+.login .login-form input:focus + label {
+    position: relative;
+    font-size: 1rem;
+    top: -4rem;
+    left: 0rem;
+    color: #80ff00;
+}
+
+
+.login .login-form input:not(:placeholder-shown) + label{
+    position: relative;
+    font-size: 1rem;
+    top: -4rem;
+    left: 0rem;
+    color: #80ff00;
+}
+
+.login .login-form input:focus{
+    outline: none;
 }
 
 .login .login-form input[type=text],input[type=password]{
+    position: relative;
     width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
+    padding:  6px 5rem 6px 1.5rem;
+    margin: .5rem 0;
     display: inline-block;
-    border: 1px solid #ccc;
+    /*border: 1px solid #ccc;*/
     box-sizing: border-box;
     font-size: 1rem;
+    border: none;
+    border-bottom: 1px solid #fff;
+    background-color: rgba(255, 255, 255, 0.0);
+    z-index: 1;
+    color: #fff;
+}
+
+.login-form .button-container{
+    display: flex;
+    justify-content: space-between;
+    margin: 3rem 0;
+}
+
+
+.login-form button{
+    display: flex;
+    width: 40%;
+    height: 2.5rem;
+    border-radius: 12px;
+    font-size: 2rem;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+}
+
+.login-form #sign-in-button{
+    background-color:rgba(255, 255, 255, 0);
+    color: #80ff00;
+    border: 1px solid #80ff00;
+}
+
+.login-form #sign-in-button:hover{
+    background-color:#80ff00;
+    color: rgb(86, 5, 179);
+    transition: ease-out .25s;
+}
+
+.login-form #sign-up-button{
+    background-color: #f00;
+    border: 1.5px solid #f00;
+    color: #fff;
+}
+
+.login-form #sign-up-button:hover{
+    background-color: rgba(0, 0, 0, .8);
+    color: rgb(255, 0, 0);
+    transition: ease-out .25s;
 }
 
 .member .footer-copyright{
@@ -468,9 +568,9 @@ body,html{
     align-self: flex-end;
     width: 100%;
 
-    background-color: #222;
+    background-color: rgb(99, 99, 99);
     text-align: center;
     font-size: 18px;
     padding: 5px 0px;
-    color: #66cdaa;
+    color: rgba(255, 160, 122);
 }

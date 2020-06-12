@@ -17,7 +17,7 @@
                 <a href="#talent-skills-bookM">課程分類</a>
                 <a href="#recent-activity-bookM">近期活動</a>
                 <a href="#elite-lecturer-bookM">菁英講師</a>               
-                <a href="#footer-about-bookM">關於我們</a>
+                <a href="#footer-about-bookM">會員專區</a>
             </nav>
             
             <form action="#" class="header-search">
@@ -130,15 +130,23 @@
     
         <div class="member container" id="footer-about-bookM">
             <div class="login">
-                <form action="#" method="POST" class="login-form">
+                <div class="user-image">
+                    <i class="fa fa-users fa-5x"></i>
+                </div>
+                <form action="#" method="" class="login-form">
+                    
                     <div class="login-container">
+                        <input type="text" placeholder="  " name="uname" autocomplete="off" required/>
                         <label for="uname">Username</label>
-                        <input type="text" placeholder="Enter Username" name="uname" required>
-
+                        <i class="fa fa-user fa-lg"></i>
+                        
+                        <input type="password" placeholder="  " name="psw" required/>
                         <label for="psw">Password</label>
-                        <input type="password" placeholder="Enter Password" name="psw" required>
-
-                        <button type="submit">Sign in</button>
+                        <i class="fa fa-lock fa-lg"></i>
+                        <div class="button-container">
+                            <button type="submit" id="sign-in-button">Sign in</button>
+                            <button type="submit" id="sign-up-button">Sign up</button>
+                        </div>                       
                     </div>
                 </form>
             </div>

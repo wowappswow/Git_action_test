@@ -139,6 +139,41 @@ body,html{
     background-size: cover;
 }
 
+.banner #mouse-icon{
+    display: flex;
+    margin: 0 auto;
+    width: 50px;
+    height: 90px;
+    border: 2px solid rgba(253, 116, 62);
+    border-radius: 25px;
+    position: relative;
+    bottom: -20%;
+}
+
+.banner #mouse-icon::after{
+    content: "";
+    width: 10px;
+    height: 20px;
+    background-color: rgb(253, 116, 62);
+    position: absolute;
+    top: 10px;
+    left: calc(50% - 5px);
+    border-radius: 5px;
+    animation: mouseScrolling 2s infinite;
+}
+
+@keyframes mouseScrolling{
+    0% {
+        opacity: 1;
+        top: 10px;
+    }
+    100% {
+        opacity: 0;
+        top: 50px;
+    }
+}
+
+
 .banner .txt{
     display: flex;
     flex-direction: column;
